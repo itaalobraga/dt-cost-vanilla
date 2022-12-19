@@ -11,13 +11,13 @@ main .content-wrapper {
   height: 100%;
 }
 
-main .cards-wrapper {
+main .summary {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-main .cards-wrapper .card {
+main .summary .summary-card {
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
@@ -33,47 +33,52 @@ main .cards-wrapper .card {
   margin: -4.25rem 0 0;
 }
 
-main .cards-wrapper .card.total {
+main .summary .summary-card.total {
   background: var(--green);
 }
 
-main .cards-wrapper .card header.card-header {
+main .summary .summary-card header.summary-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
 }
 
-main .cards-wrapper .card header.card-header div.card-header__image {
+main .summary .summary-card header.summary-card-header div.summary-card-header__image {
   width: 2rem;
   height: 2rem;
 }
 
-main .cards-wrapper .card header.card-header div.card-header__image img {
+main
+  .summary
+  .summary-card
+  header.summary-card-header
+  div.summary-card-header__image
+  img {
   width: 100%;
 
   object-fit: cover;
 }
 
-main .cards-wrapper .card header.card-header h1 {
+main .summary .summary-card header.summary-card-header h1 {
   font-weight: 400;
   font-size: 1rem;
 
   color: var(--title);
 }
 
-main .cards-wrapper .card.total header.card-header h1 {
+main .summary .summary-card.total header.summary-card-header h1 {
   color: var(--white);
 }
 
-main .cards-wrapper .card strong {
+main .summary .summary-card strong {
   font-weight: 400;
   font-size: 2.25rem;
 
   color: var(--title);
 }
 
-main .cards-wrapper .card.total strong {
+main .summary .summary-card.total strong {
   color: var(--white);
 }
 

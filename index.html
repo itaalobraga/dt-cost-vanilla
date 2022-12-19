@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/header.css" />
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/modal.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
   </head>
   <body>
     <header class="header-initial">
@@ -30,33 +30,33 @@
 
     <main>
       <div class="content-wrapper">
-        <div class="cards-wrapper">
-          <div class="card">
-            <header class="card-header">
+        <div class="summary">
+          <div class="summary-card">
+            <header class="summary-card-header">
               <h1>Entradas</h1>
-              <div class="card-header__image">
+              <div class="summary-card-header__image">
                 <img src="./assets/arrow-up.svg" />
               </div>
             </header>
-            <strong>R$ 17.400,00</strong>
+            <strong class="summary-incomes"></strong>
           </div>
-          <div class="card">
-            <header class="card-header">
+          <div class="summary-card">
+            <header class="summary-card-header">
               <h1>Saídas</h1>
-              <div class="card-header__image">
+              <div class="summary-card-header__image">
                 <img src="./assets/arrow-down.svg" />
               </div>
             </header>
-            <strong>R$ 17.400,00</strong>
+            <strong class="summary-outcomes"></strong>
           </div>
-          <div class="card total">
-            <header class="card-header">
+          <div class="summary-card total">
+            <header class="summary-card-header">
               <h1>Total</h1>
-              <div class="card-header__image">
+              <div class="summary-card-header__image">
                 <img src="./assets/dollar.svg" />
               </div>
             </header>
-            <strong>R$ 17.400,00</strong>
+            <strong class="summary-total"></strong>
           </div>
         </div>
 
@@ -70,20 +70,7 @@
                 <th>Data</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td class="title">Desenvolvimento de site</td>
-                <td class="income">R$ 12.000,00</td>
-                <td>Venda</td>
-                <td>13/04/2021</td>
-              </tr>
-              <tr>
-                <td class="title">Desenvolvimento de site</td>
-                <td class="outcome">R$ 12.000,00</td>
-                <td>Venda</td>
-                <td>13/04/2021</td>
-              </tr>
-            </tbody>
+            <tbody class="table-body"></tbody>
           </table>
         </div>
       </div>
@@ -95,15 +82,22 @@
           <img src="./assets/x.svg" />
         </button>
 
-        <form>
+        <form id="transaction-form">
           <h1>Cadastrar transação</h1>
 
           <label for="name" class="input-text">
-            <input type="text" name="name" id="name" placeholder="Nome" />
+            <input type="text" name="name" id="name" placeholder="Nome" required />
           </label>
 
           <label for="price" class="input-text">
-            <input type="number" name="name" id="price" placeholder="Preço" />
+            <input
+              type="currency"
+              name="price"
+              id="price"
+              placeholder="Preço"
+              value="R$ 0,00"
+              required
+            />
           </label>
 
           <div class="input-wrapper">
@@ -112,7 +106,13 @@
                 <img src="./assets/arrow-up.svg" />
               </div>
 
-              <input type="radio" name="transaction-type" id="income" value="income" checked />
+              <input
+                type="radio"
+                name="transaction-type"
+                id="income"
+                value="income"
+                checked
+              />
 
               Entrada
             </label>
@@ -129,13 +129,20 @@
           </div>
 
           <label for="category" class="input-text">
-            <input type="text" name="name" id="category" placeholder="Categoria" />
+            <input
+              type="text"
+              name="category"
+              id="category"
+              placeholder="Categoria"
+              required
+            />
           </label>
 
           <button type="submit" class="modal-register">Cadastrar</button>
         </form>
       </div>
     </div>
-    <script src="./scripts/modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/transactions.js"></script>
   </body>
 </html>

@@ -129,9 +129,6 @@ div.modal-overlay
   border: unset;
 }
 
-/*border: unset remove algo que já está setado
-lê-se label que tem (:has) input do id  com atributo do tipo rádio quando estiver checado, recebe essas propriedades*/
-
 div.modal-overlay
   div.modal-content
   form
@@ -140,7 +137,12 @@ div.modal-overlay
   background-color: rgba(229, 46, 77, 0.1);
 }
 
-div.modal-overlay div.modal-content form div.input-wrapper label.input-radio div.radio-icon {
+div.modal-overlay
+  div.modal-content
+  form
+  div.input-wrapper
+  label.input-radio
+  div.radio-icon {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -157,7 +159,6 @@ div.modal-overlay
 
   object-fit: cover;
 }
-/*object-fit serve para manter a proporção da imagem e ela nao distorcer*/
 
 div.modal-overlay
   div.modal-content
@@ -169,7 +170,3 @@ div.modal-overlay
 
   appearance: none;
 }
-/*display none deixa de existir no navegador, para acessibilidade é ruim.
-order: é aplicado nos filhos, onde cada um assume uma posição, 1,2,3... adicionando order, ele troca de lugar com o da posição
-[seletor de atributo em css]
-appearance tira a estilização padrão do browser*/

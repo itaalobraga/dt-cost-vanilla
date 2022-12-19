@@ -10,9 +10,6 @@ closeModalButton.addEventListener("click", handleModal);
 function handleModal() {
   modalOverlay.classList.toggle("close");
 }
-/* se o elemnto tiver uma classe, ele remove, se não tiver, ele adiciona.
-O toggle()método da DOMTokenListinterface remove um token existente da lista e 
-retorna false. Se o token não existir, ele é adicionado e a função retorna true */
 
 modalOverlay.addEventListener("click", handleOutsideClick);
 
@@ -23,5 +20,13 @@ function handleOutsideClick(e) {
     handleModal();
 
     return;
+  }
+}
+
+document.addEventListener("keydown", handleEscPress);
+
+function handleEscPress(e) {
+  if (e.key === "Escape") {
+    modalOverlay.classList.add("close");
   }
 }
