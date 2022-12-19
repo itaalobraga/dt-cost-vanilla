@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dt-money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/modal.css" />
+  </head>
+  <body>
+    <header class="header-initial">
+      <div class="content-header">
+        <div class="logo-image">
+          <img src="./assets/logo.svg" alt="" />
+        </div>
+        <div class="button-header">
+          <button id="new-transaction">Nova transação</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content-wrapper">
+        <div class="cards-wrapper">
+          <div class="card">
+            <header class="card-header">
+              <h1>Entradas</h1>
+              <div class="card-header__image">
+                <img src="./assets/arrow-up.svg" />
+              </div>
+            </header>
+            <strong>R$ 17.400,00</strong>
+          </div>
+          <div class="card">
+            <header class="card-header">
+              <h1>Saídas</h1>
+              <div class="card-header__image">
+                <img src="./assets/arrow-down.svg" />
+              </div>
+            </header>
+            <strong>R$ 17.400,00</strong>
+          </div>
+          <div class="card total">
+            <header class="card-header">
+              <h1>Total</h1>
+              <div class="card-header__image">
+                <img src="./assets/dollar.svg" />
+              </div>
+            </header>
+            <strong>R$ 17.400,00</strong>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="title">Desenvolvimento de site</td>
+                <td class="income">R$ 12.000,00</td>
+                <td>Venda</td>
+                <td>13/04/2021</td>
+              </tr>
+              <tr>
+                <td class="title">Desenvolvimento de site</td>
+                <td class="outcome">R$ 12.000,00</td>
+                <td>Venda</td>
+                <td>13/04/2021</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal-overlay close">
+      <div class="modal-content">
+        <button class="modal-close">
+          <img src="./assets/x.svg" />
+        </button>
+
+        <form>
+          <h1>Cadastrar transação</h1>
+
+          <label for="name" class="input-text">
+            <input type="text" name="name" id="name" placeholder="Nome" />
+          </label>
+
+          <label for="price" class="input-text">
+            <input type="number" name="name" id="price" placeholder="Preço" />
+          </label>
+
+          <div class="input-wrapper">
+            <label class="input-radio" for="income">
+              <div class="radio-icon">
+                <img src="./assets/arrow-up.svg" />
+              </div>
+
+              <input type="radio" name="transaction-type" id="income" value="income" checked />
+
+              Entrada
+            </label>
+
+            <label class="input-radio" for="outcome">
+              <div class="radio-icon">
+                <img src="./assets/arrow-down.svg" />
+              </div>
+
+              <input type="radio" name="transaction-type" id="outcome" value="outcome" />
+
+              Saída
+            </label>
+          </div>
+
+          <label for="category" class="input-text">
+            <input type="text" name="name" id="category" placeholder="Categoria" />
+          </label>
+
+          <button type="submit" class="modal-register">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/modal.js"></script>
+  </body>
+</html>

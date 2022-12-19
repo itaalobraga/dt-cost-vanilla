@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: transparent;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: 0;
+}
+
+:root {
+  --purple-dark-color: #5429cc;
+  --purple-light-color: #6933ff;
+
+  --white: #ffffff;
+  --green: #33cc95;
+  --red: #e62e4d;
+
+  --title: #363f5f;
+  --text: #969cb3;
+
+  --retangle-color: #e7e9ee;
+}
+
+html {
+  font-size: 81.25%;
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+
+  height: 100vh;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}

@@ -1,0 +1,23 @@
+header.header-initial {
+  max-width: 100%;
+  background-color: var(--purple-dark-color);
+  min-height: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+header.header-initial div.content-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  width: min(70rem, 100%);
+}
+
+header.header-initial div.button-header button {
+  font: 600 1rem Poppins;
+  color: white;
+  background-color: var(--purple-light-color);
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+}
